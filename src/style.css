@@ -211,40 +211,43 @@ h1 {
 /* ─── QR button ──────────────────────────────────────────── */
 .qr-button {
   width: 100%;
-  min-height: 60px;
+  min-height: 62px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 22px;
-  padding: 10px 14px;
-  color: var(--graphite);
-  background: rgba(255, 255, 255, .96);
-  border-radius: 5px;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 12px 14px;
+  color: var(--paper);
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 6px;
   text-align: left;
   transition: background .15s ease;
 }
-.qr-button:hover { background: #fff; }
-.qr-button .v-icon { margin-left: auto; color: var(--blue); }
+.qr-button:hover { background: rgba(255, 255, 255, .11); }
+.qr-button .v-icon { margin-left: auto; color: rgba(245, 242, 236, .55); }
 .qr-button strong,
 .qr-button small { display: block; }
-.qr-button strong { font-size: 13px; font-weight: 600; }
+.qr-button strong { font-size: 14px; font-weight: 600; }
 .qr-button small {
   margin-top: 3px;
-  color: var(--muted);
+  color: rgba(245, 242, 236, .65);
   font: 9px 'DM Mono', monospace;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: .1em;
 }
 .qr-mini {
   display: grid;
   place-items: center;
   flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  font-size: 28px;
-  line-height: 1;
-  border: 1.5px solid var(--graphite);
+  width: 40px;
+  height: 40px;
+  color: var(--paper);
+  background: rgba(255, 255, 255, .13);
+  border-radius: 4px;
+  font-size: 22px;
 }
+.qr-mini .v-icon { color: var(--paper); margin-left: 0; }
 .ticket-id {
   margin-top: 16px;
   padding-top: 14px;

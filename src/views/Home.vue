@@ -15,7 +15,7 @@ const showQr = ref(false)
         <div class="credential-body">
           <div class="attendee-row"><div><span class="field-label">Attendee</span><h2>{{ event.attendee.name }}</h2></div><div class="pass-type"><span class="field-label">Pass type</span><strong>{{ event.passType }}</strong></div></div>
           <div class="credential-rule"></div><div class="credential-grid"><div><span class="field-label">Entry gate</span><strong>{{ event.entryGate }}</strong></div><div><span class="field-label">Gate time</span><strong>{{ event.gateTime }}</strong></div></div>
-          <button class="qr-button" @click="showQr = true"><span class="qr-mini">▦</span><span><strong>Show QR code</strong><small>Tap to expand for entry</small></span><v-icon icon="mdi-arrow-up-right" /></button><div class="ticket-id">{{ event.attendee.ticketId }}</div>
+          <button class="qr-button" @click="showQr = true"><span class="qr-mini"><v-icon icon="mdi-qrcode" /></span><span><strong>Show QR code</strong><small>Tap to expand for entry</small></span><v-icon icon="mdi-arrow-up-right" /></button><div class="ticket-id">{{ event.attendee.ticketId }}</div>
         </div>
       </section>
       <button class="details-link" @click="$router.push('/details')"><span><v-icon icon="mdi-information-outline" /> Event details</span><v-icon icon="mdi-arrow-right" /></button>
