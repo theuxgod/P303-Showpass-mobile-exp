@@ -1,0 +1,23 @@
+{
+  "festival": "Northern Lights Festival",
+  "edition": "2026",
+  "attendee": {
+    "name": "Maya Chen",
+    "ticketId": "NLF26-048219"
+  },
+  "passType": "Weekend Pass",
+  "dates": {
+    "short": "Aug 28-30, 2026",
+    "range": "Friday, August 28 - Sunday, August 30, 2026"
+  },
+  "venue": "Prince's Island Park",
+  "city": "Calgary, Alberta",
+  "entryGate": "Gate 2 · Riverfront",
+  "gateTime": "3:00 PM",
+  "showTime": "5:00 PM",
+  "qrValue": "NLF26-MAYA-048219-7KQ2",
+  "parkingAndRideshare": "Parking is available at Eau Claire Plaza and the Calgary Curling Club. Rideshare drop-off and pickup is at 2nd Street SW, outside Gate 2. Expect a short walk to the festival entrance.",
+  "bagPolicy": "Small bags up to 12 x 6 x 12 in are welcome. All bags are subject to search. Clear bags are recommended; outside food, glass, and professional cameras are not permitted.",
+  "reentry": "Re-entry is allowed with a valid wristband and the same-day ticket. Keep your wristband intact and scan out with Guest Services before leaving.",
+  "accessibility": "Accessible entry is available at Gate 2 with level pathways, viewing platforms, accessible washrooms, and a dedicated Guest Services team. Contact the team on arrival for assistance."
+}
