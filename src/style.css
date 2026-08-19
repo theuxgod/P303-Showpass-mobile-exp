@@ -74,6 +74,20 @@ h1 { max-width: 390px; font-size: clamp(42px, 11vw, 64px); line-height: .91; let
 .details-page .icon-button { color: var(--paper); }
 .details-page .topbar-mark { color: var(--acid); }
 .details-page .details-hero { position: relative; }
+.details-page .details-hero::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  right: -42px;
+  width: 220px;
+  height: 94px;
+  opacity: .48;
+  transform: rotate(-8deg);
+  background:
+    linear-gradient(112deg, transparent 0 28%, rgba(217, 251, 82, .44) 29% 34%, transparent 35% 48%, rgba(77, 188, 153, .24) 49% 54%, transparent 55%),
+    linear-gradient(112deg, transparent 0 42%, rgba(241, 101, 61, .18) 43% 47%, transparent 48%);
+  pointer-events: none;
+}
 .details-page .details-hero::after {
   content: 'NLF / 26';
   position: absolute;
@@ -91,8 +105,13 @@ h1 { max-width: 390px; font-size: clamp(42px, 11vw, 64px); line-height: .91; let
   box-shadow: 0 14px 30px rgba(23, 23, 23, .14);
 }
 .details-page .arrival-card .section-label { color: var(--acid); }
+.details-page .arrival-grid > div {
+  padding-top: 11px;
+  border-top: 1px solid rgba(255, 255, 255, .16);
+}
 .details-page .arrival-grid span,
 .details-page .arrival-grid small { color: #8e8d89; }
+.details-page .arrival-grid span { font: 9px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; }
 .details-page .arrival-grid strong { color: var(--paper); }
 .details-page .info-section .section-label { color: var(--orange); }
 .details-page .accordion-item { border-bottom-color: var(--line); }
@@ -116,3 +135,14 @@ h1 { max-width: 390px; font-size: clamp(42px, 11vw, 64px); line-height: .91; let
   background: var(--acid);
 }
 .details-page .details-footer .primary-button .v-icon { color: var(--night); }
+.details-page .pass-return-mark {
+  display: inline-grid;
+  place-items: center;
+  min-width: 38px;
+  height: 24px;
+  padding: 0 6px;
+  color: var(--night);
+  border: 1px solid rgba(23, 23, 23, .55);
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: .12em;
+}

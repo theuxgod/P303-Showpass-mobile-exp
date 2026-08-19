@@ -37,6 +37,6 @@ function togglePanel(id: string) {
         </div>
       </div></section>
     </main>
-    <footer class="details-footer"><button class="primary-button" @click="$router.push('/')"><v-icon icon="mdi-ticket-confirmation-outline" /> View pass</button></footer>
+    <footer class="details-footer"><button class="primary-button" @click="$router.push('/')"><span class="pass-return-mark">PASS</span> View pass</button></footer>
   </div>
 </template>
