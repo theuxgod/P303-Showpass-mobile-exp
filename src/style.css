@@ -268,13 +268,14 @@ h1 {
   padding: 16px 0;
   color: var(--ink);
   background: transparent;
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: left;
 }
 .details-link span { display: flex; align-items: center; gap: 8px; }
-.details-link .v-icon { font-size: 18px; color: var(--muted); }
+.details-link .v-icon { font-size: 18px; color: var(--ink); }
 
 /* ─── Pass footer ────────────────────────────────────────── */
 .pass-footer {
