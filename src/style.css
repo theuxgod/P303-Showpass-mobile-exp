@@ -194,14 +194,7 @@ h1 {
 .credential-rule {
   height: 1px;
   margin: 20px 0 16px;
-  /* perforated boarding-pass tear line */
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(255, 255, 255, .22) 0,
-    rgba(255, 255, 255, .22) 4px,
-    transparent 4px,
-    transparent 9px
-  );
+  background: var(--line-inv);
 }
 .credential-grid { justify-content: flex-start; }
 .credential-grid > div { min-width: 45%; }
