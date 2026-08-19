@@ -76,8 +76,8 @@ button { border: 0; font: inherit; cursor: pointer; }
 }
 
 /* ─── Pass content ───────────────────────────────────────── */
-.pass-content { flex: 1; padding: 32px 22px 28px; }
-.festival-heading { margin-bottom: 26px; }
+.pass-content { flex: 1; padding: 24px 22px 16px; }
+.festival-heading { margin-bottom: 18px; }
 .eyebrow {
   display: block;
   margin: 0 0 12px;
@@ -96,7 +96,7 @@ h1 {
 }
 .festival-meta,
 .muted-copy {
-  margin-top: 16px;
+  margin-top: 10px;
   color: var(--muted);
   font-size: 12px;
   font-weight: 400;
@@ -275,7 +275,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 22px 20px;
+  padding: 0 22px 16px;
   color: var(--muted);
   font: 8px 'DM Mono', monospace;
   text-transform: uppercase;
