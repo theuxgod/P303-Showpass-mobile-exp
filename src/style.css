@@ -65,3 +65,54 @@ h1 { max-width: 390px; font-size: clamp(42px, 11vw, 64px); line-height: .91; let
 @keyframes rise-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes reveal { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+.details-page .topbar {
+  color: var(--paper);
+  background: var(--night);
+  border-bottom-color: var(--night);
+}
+.details-page .icon-button { color: var(--paper); }
+.details-page .topbar-mark { color: var(--acid); }
+.details-page .details-hero { position: relative; }
+.details-page .details-hero::after {
+  content: 'NLF / 26';
+  position: absolute;
+  top: 4px;
+  right: 0;
+  color: var(--muted);
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: .12em;
+}
+.details-page .arrival-card {
+  color: var(--paper);
+  background: var(--night);
+  border-top: 0;
+  border-radius: 4px;
+  box-shadow: 0 14px 30px rgba(23, 23, 23, .14);
+}
+.details-page .arrival-card .section-label { color: var(--acid); }
+.details-page .arrival-grid span,
+.details-page .arrival-grid small { color: #8e8d89; }
+.details-page .arrival-grid strong { color: var(--paper); }
+.details-page .info-section .section-label { color: var(--orange); }
+.details-page .accordion-item { border-bottom-color: var(--line); }
+.details-page .accordion-icon {
+  width: 31px;
+  height: 31px;
+  color: var(--acid);
+  background: var(--night);
+  border-radius: 2px;
+}
+.details-page .accordion-item.expanded {
+  color: var(--paper);
+  background: var(--night);
+  border-bottom-color: rgba(255, 255, 255, .14);
+}
+.details-page .accordion-item.expanded .accordion-icon { color: var(--night); background: var(--acid); }
+.details-page .accordion-item.expanded .accordion-copy { color: #c4c1b9; }
+.details-page .accordion-item.expanded .chevron { color: var(--acid); }
+.details-page .details-footer .primary-button {
+  color: var(--night);
+  background: var(--acid);
+}
+.details-page .details-footer .primary-button .v-icon { color: var(--night); }
