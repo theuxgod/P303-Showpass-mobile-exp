@@ -20,7 +20,7 @@ const showQr = ref(false)
       </section>
       <button class="details-link" @click="$router.push('/details')"><span><v-icon icon="mdi-information-outline" /> Event details</span><v-icon icon="mdi-arrow-right" /></button>
     </main>
-    <footer class="pass-footer"><span>Keep this pass ready at the gate</span><v-icon icon="mdi-signal-cellular-3" /></footer>
+    <footer class="pass-footer"><v-icon icon="mdi-signal-cellular-3" /></footer>
     <div v-if="showQr" class="qr-overlay" role="dialog" aria-modal="true"><button class="close-button" aria-label="Close QR code" @click="showQr = false"><v-icon icon="mdi-close" /></button><p class="eyebrow">Scan for entry</p><h2>{{ event.attendee.name }}</h2><div class="qr-large"><div class="qr-pattern">{{ event.qrValue }}</div></div><strong>{{ event.entryGate }}</strong><span class="qr-caption">{{ event.festival }} · {{ event.dates.short }}</span><button class="primary-button done-button" @click="showQr = false">Done</button></div>
   </div>
 </template>
