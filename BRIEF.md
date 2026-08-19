@@ -70,6 +70,18 @@ Use:
 - Large touch targets
 - Subtle motion and interaction
 - Realistic event content
+- warm off white backgrounds
+- deep graphite credential surfaces
+- cool gray secondary text
+- one restrained electric blue accent
+- DIN style typography
+- Thin dividers and subtle borders
+- Minimal shadows
+- Strong controlled hierarchy
+
+Avoid neon colors, gradients, overly futuristic styling, and generic ai generated patterns
+
+The pass should be the expressive hero. Event details should feel lighter, calmers, and utility focused while using the same visual system.
 
 The pass should feel like a designed digital credential, not a standard webpage card.
 
