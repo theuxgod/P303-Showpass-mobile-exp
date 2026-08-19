@@ -27,7 +27,7 @@ function togglePanel(id: string) {
       <section class="arrival-card"><div class="section-label">Arrival essentials</div><div class="arrival-grid">
         <div><span>Venue</span><strong>{{ event.venue }}</strong><small>{{ event.city }}</small></div>
         <div><span>Entry</span><strong>{{ event.entryGate }}</strong><small>Gates open {{ event.gateTime }}</small></div>
-        <div><span>First show</span><strong>{{ event.showTime }}</strong><small>Friday, August 28</small></div>
+        <div><span>First show</span><strong>{{ event.showTime }}</strong><small>{{ event.dates.openingDay }}</small></div>
         <div><span>Dates</span><strong>{{ event.dates.short }}</strong><small>All weekend access</small></div>
       </div></section>
       <section class="info-section"><div class="section-label">Good to know</div><div class="accordion-list">

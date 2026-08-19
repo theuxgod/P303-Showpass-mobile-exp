@@ -8,7 +8,8 @@
   "passType": "Weekend Pass",
   "dates": {
     "short": "Aug 28-30, 2026",
-    "range": "Friday, August 28 - Sunday, August 30, 2026"
+    "range": "Friday, August 28 - Sunday, August 30, 2026",
+    "openingDay": "Friday, August 28"
   },
   "venue": "Prince's Island Park",
   "city": "Calgary, Alberta",
