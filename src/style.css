@@ -5,17 +5,19 @@
   --graphite: #242424;
   --paper:    #f5f2ec;
   --surface:  #eceae3;
-  --muted:    #8c8f96;
+  --muted:    #5c6170;  /* was #8c8f96; darkened to 5.5:1 on paper */
   --line:     rgba(28, 28, 30, .09);
   --line-inv: rgba(255, 255, 255, .13);
-  --blue:     #3d7ee8;
+  --blue:     #3d7ee8;   /* accent: borders, icon fills — 3:1 OK for non-text */
+  --blue-lo:  #1656b0;  /* blue text on light backgrounds — 6.3:1 on paper   */
+  --blue-hi:  #6199f0;  /* blue text on dark backgrounds  — 5.4:1 on graphite */
 
   /* legacy aliases kept so overrides still resolve */
   --night: var(--graphite);
 
   font-family: 'Barlow', sans-serif;
   color: var(--ink);
-  background: #e8e5de;
+  background: #d4d0c8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -49,7 +51,7 @@ button { border: 0; font: inherit; cursor: pointer; }
   border-bottom: 1px solid var(--line);
 }
 .wordmark { font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.wordmark span { color: var(--blue); }
+.wordmark span { color: var(--blue-lo); }
 .edition {
   color: var(--muted);
   font: 9px 'DM Mono', monospace;
@@ -79,7 +81,7 @@ button { border: 0; font: inherit; cursor: pointer; }
 .eyebrow {
   display: block;
   margin: 0 0 12px;
-  color: var(--blue);
+  color: var(--blue-lo);
   font: 9px 'DM Mono', monospace;
   text-transform: uppercase;
   letter-spacing: .13em;
@@ -108,13 +110,19 @@ h1 {
   overflow: hidden;
   background: var(--graphite);
   color: var(--paper);
-  border-radius: 3px;
-  box-shadow: 0 8px 28px rgba(28, 28, 30, .16);
+  border-radius: 10px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .07),
+    0 1px 2px  rgba(0, 0, 0, .14),
+    0 4px 10px rgba(0, 0, 0, .16),
+    0 16px 32px rgba(28, 28, 30, .24),
+    0 32px 48px rgba(28, 28, 30, .10);
 }
 .credential-image {
   position: relative;
   height: 200px;
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
   background: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=85') center 48% / cover;
 }
 .image-overlay {
@@ -128,7 +136,7 @@ h1 {
   bottom: 16px;
   display: flex;
   align-items: baseline;
-  gap: 7px;
+  gap: 5px;
 }
 .credential-image-copy span {
   font: 11px 'DM Mono', monospace;
@@ -136,20 +144,23 @@ h1 {
   color: rgba(255, 255, 255, .65);
 }
 .credential-image-copy strong {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 62px;
-  font-weight: 700;
-  line-height: .8;
-  letter-spacing: -.02em;
+  font: 700 13px 'DM Mono', monospace;
+  letter-spacing: .1em;
+  color: rgba(255, 255, 255, .90);
 }
 .pass-status {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 14px;
+  right: 14px;
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--blue);
+  padding: 4px 8px;
+  color: var(--blue-hi);
+  background: rgba(20, 20, 22, .52);
+  border: 1px solid rgba(61, 126, 232, .28);
+  border-radius: 3px;
+  backdrop-filter: blur(6px);
   font: 9px 'DM Mono', monospace;
   letter-spacing: .1em;
 }
@@ -159,7 +170,7 @@ h1 {
 .field-label {
   display: block;
   margin-bottom: 7px;
-  color: #72767f;
+  color: #9298a4;
   font: 8px 'DM Mono', monospace;
   text-transform: uppercase;
   letter-spacing: .13em;
@@ -177,14 +188,21 @@ h1 {
   display: block;
   font-size: 11px;
   font-weight: 600;
-  color: var(--blue);
+  color: var(--blue-hi);
   letter-spacing: .02em;
   white-space: nowrap;
 }
 .credential-rule {
   height: 1px;
   margin: 20px 0 16px;
-  background: var(--line-inv);
+  /* perforated boarding-pass tear line */
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, .22) 0,
+    rgba(255, 255, 255, .22) 4px,
+    transparent 4px,
+    transparent 9px
+  );
 }
 .credential-grid { justify-content: flex-start; }
 .credential-grid > div { min-width: 45%; }
@@ -201,7 +219,7 @@ h1 {
   padding: 10px 14px;
   color: var(--graphite);
   background: rgba(255, 255, 255, .96);
-  border-radius: 2px;
+  border-radius: 5px;
   text-align: left;
   transition: background .15s ease;
 }
@@ -229,10 +247,12 @@ h1 {
 }
 .ticket-id {
   margin-top: 16px;
-  color: #62666f;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, .07);
+  color: #9298a4;
   font: 9px 'DM Mono', monospace;
   text-transform: uppercase;
-  letter-spacing: .12em;
+  letter-spacing: .18em;
   text-align: center;
 }
 
@@ -283,6 +303,7 @@ h1 {
   text-align: center;
 }
 .qr-overlay .close-button { align-self: flex-end; color: var(--paper); }
+.qr-overlay .eyebrow { color: var(--blue-hi); }
 .qr-overlay h2 {
   margin-bottom: 26px;
   font-family: 'Barlow Condensed', sans-serif;
@@ -315,7 +336,7 @@ h1 {
 .qr-overlay > strong { font-size: 14px; font-weight: 600; letter-spacing: .02em; }
 .qr-caption {
   margin-top: 6px;
-  color: #6a6e77;
+  color: #9298a4;
   font: 9px 'DM Mono', monospace;
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -323,10 +344,10 @@ h1 {
 .done-button {
   width: 100%;
   margin-top: auto;
-  color: #fff;
-  background: var(--blue);
+  color: var(--ink);
+  background: #5e98f0; /* lighter blue — 5.9:1 vs ink */
 }
-.done-button .v-icon { color: #fff; }
+.done-button .v-icon { color: var(--ink); }
 
 /* ─── Shared layout rules (details) ─────────────────────── */
 .details-content { padding: 32px 22px 110px; }
@@ -352,7 +373,7 @@ h1 {
 .arrival-grid span,
 .arrival-grid small {
   display: block;
-  color: #6a6e77;
+  color: #9298a4;
   font: 9px 'DM Mono', monospace;
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -435,7 +456,7 @@ h1 {
 }
 .details-page .icon-button { color: var(--paper); }
 .details-page .topbar-title { color: var(--paper); }
-.details-page .topbar-mark { color: var(--blue); }
+.details-page .topbar-mark { color: var(--blue-hi); }
 .details-page .details-hero { position: relative; }
 .details-page .details-hero::after {
   content: 'NLF / 26';
@@ -447,7 +468,7 @@ h1 {
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-.details-page .arrival-card .section-label { color: var(--blue); }
+.details-page .arrival-card .section-label { color: var(--blue-hi); }
 .details-page .info-section .section-label { color: var(--muted); }
 
 /* ─── Expanded accordion ─────────────────────────────────── */
@@ -474,7 +495,7 @@ h1 {
   font-size: 12px;
   line-height: 1.65;
 }
-.details-page .accordion-item.expanded .chevron { color: var(--blue); }
+.details-page .accordion-item.expanded .chevron { color: var(--blue-hi); }
 
 /* ─── View pass button in details ────────────────────────── */
 .details-page .details-footer .primary-button {
