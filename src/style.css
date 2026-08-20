@@ -493,15 +493,13 @@ h1 {
 
 /* ─── Expanded accordion ─────────────────────────────────── */
 .details-page .accordion-item.expanded {
-  margin: 6px 0;
   background: var(--graphite);
-  border: 1px solid rgba(61, 126, 232, .28);
-  border-radius: 3px;
-  box-shadow: 0 6px 18px rgba(28, 28, 30, .10), inset 3px 0 0 var(--blue);
+  border-left: 3px solid var(--blue);
+  border-bottom-color: rgba(255, 255, 255, .10);
   overflow: hidden;
 }
 .details-page .accordion-item.expanded .accordion-trigger {
-  padding: 14px 14px 13px 12px;
+  padding: 14px 14px 13px 9px;
   color: var(--paper);
 }
 .details-page .accordion-item.expanded .accordion-icon {
@@ -509,11 +507,11 @@ h1 {
   background: var(--blue);
 }
 .details-page .accordion-item.expanded .accordion-copy {
-  padding: 14px 20px 20px 54px;
+  padding: 0 20px 20px 51px;
   border-top: 1px solid var(--line-inv);
   color: #b8bbc4;
-  font-size: 12px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.6;
 }
 .details-page .accordion-item.expanded .chevron { color: var(--blue-hi); }
 
