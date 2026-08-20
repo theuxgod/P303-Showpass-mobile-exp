@@ -490,6 +490,7 @@ h1 {
 }
 .details-page .arrival-card .section-label { color: var(--blue-hi); }
 .details-page .info-section .section-label { color: var(--muted); }
+.details-page .accordion-trigger { padding-right: 12px; }
 
 /* ─── Expanded accordion ─────────────────────────────────── */
 .details-page .accordion-item.expanded {
@@ -499,7 +500,7 @@ h1 {
   overflow: hidden;
 }
 .details-page .accordion-item.expanded .accordion-trigger {
-  padding: 14px 14px 13px 9px;
+  padding: 14px 12px 13px 9px;
   color: var(--paper);
 }
 .details-page .accordion-item.expanded .accordion-icon {
