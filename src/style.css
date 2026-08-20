@@ -480,16 +480,19 @@ h1 {
 .details-page .icon-button { color: var(--on-dark); }
 .details-page .topbar-title { color: var(--on-dark); }
 .details-page .topbar-mark { color: var(--blue-hi); }
-.details-page .details-hero { position: relative; }
-.details-page .details-hero::after {
+.details-page .details-hero { margin-bottom: 28px; }
+.details-page .details-hero .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.details-page .details-hero .eyebrow::before {
   content: 'NLF / 26';
-  position: absolute;
-  top: 2px;
-  right: 0;
   color: var(--muted);
   font: 9px 'DM Mono', monospace;
   letter-spacing: .12em;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 .details-page .arrival-card .section-label { color: var(--blue-hi); }
 .details-page .info-section .section-label { color: var(--muted); }
