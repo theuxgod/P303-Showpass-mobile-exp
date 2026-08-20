@@ -11,7 +11,7 @@ const showQr = ref(false)
     <main class="pass-content">
       <section class="festival-heading"><p class="eyebrow">Your access is confirmed</p><h1>{{ event.festival }}</h1><p class="festival-meta">{{ event.dates.range }}<br>{{ event.venue }} · {{ event.city }}</p></section>
       <section class="credential-card">
-        <div class="credential-image"><div class="image-overlay"></div><div class="credential-image-copy"><span>NLF</span><strong>26</strong></div><span class="pass-status"><v-icon icon="mdi-check-circle" /> ACTIVE</span></div>
+        <div class="credential-image"><div class="image-overlay"></div><div class="credential-image-copy"><span>NLF</span><strong>/ 26</strong></div><span class="pass-status"><v-icon icon="mdi-check-circle" /> ACTIVE</span></div>
         <div class="credential-body">
           <div class="attendee-row"><div><span class="field-label">Attendee</span><h2>{{ event.attendee.name }}</h2></div><div class="pass-type"><span class="field-label">Pass type</span><strong>{{ event.passType }}</strong></div></div>
           <div class="credential-rule"></div><div class="credential-grid"><div><span class="field-label">Entry gate</span><strong>{{ event.entryGate }}</strong></div><div><span class="field-label">Gate time</span><strong>{{ event.gateTime }}</strong></div></div>
