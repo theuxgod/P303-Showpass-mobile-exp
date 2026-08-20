@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import event from '../data/event.json'
+import { useTheme } from '../composables/useTheme'
 
 const showQr = ref(false)
+const { isDark, toggleTheme } = useTheme()
 </script>
 
 <template>
   <div class="pass-page">
-    <header class="topbar pass-topbar"><span class="wordmark">SHOW<span>PASS</span></span><span class="edition">{{ event.edition }} / CREDENTIAL</span></header>
+    <header class="topbar pass-topbar"><span class="wordmark">SHOW<span>PASS</span></span><span class="topbar-actions"><button class="icon-button theme-btn" @click="toggleTheme()" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"><v-icon :icon="isDark ? 'mdi-weather-sunny' : 'mdi-weather-night'" /></button><span class="edition">{{ event.edition }} / CREDENTIAL</span></span></header>
     <main class="pass-content">
       <section class="festival-heading"><p class="eyebrow">Your access is confirmed</p><h1>{{ event.festival }}</h1><p class="festival-meta">{{ event.dates.range }}<br>{{ event.venue }} · {{ event.city }}</p></section>
       <section class="credential-card">

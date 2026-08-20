@@ -11,6 +11,8 @@
   --blue:     #3d7ee8;   /* accent: borders, icon fills — 3:1 OK for non-text */
   --blue-lo:  #1656b0;  /* blue text on light backgrounds — 6.3:1 on paper   */
   --blue-hi:  #6199f0;  /* blue text on dark backgrounds  — 5.4:1 on graphite */
+  --on-dark:  #f0ede7;   /* text on dark surfaces — constant across themes      */
+  --footer-bg: rgba(245, 242, 236, .94);
 
   /* legacy aliases kept so overrides still resolve */
   --night: var(--graphite);
@@ -108,7 +110,7 @@ h1 {
 .credential-card {
   overflow: hidden;
   background: var(--graphite);
-  color: var(--paper);
+  color: var(--on-dark);
   border-radius: 10px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, .07),
@@ -209,7 +211,7 @@ h1 {
   gap: 14px;
   margin-top: 20px;
   padding: 12px 14px;
-  color: var(--paper);
+  color: var(--on-dark);
   background: rgba(255, 255, 255, .07);
   border: 1px solid rgba(255, 255, 255, .14);
   border-radius: 6px;
@@ -234,12 +236,12 @@ h1 {
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  color: var(--paper);
+  color: var(--on-dark);
   background: rgba(255, 255, 255, .13);
   border-radius: 4px;
   font-size: 22px;
 }
-.qr-mini .v-icon { color: var(--paper); margin-left: 0; }
+.qr-mini .v-icon { color: var(--on-dark); margin-left: 0; }
 .ticket-id {
   margin-top: 16px;
   padding-top: 14px;
@@ -294,7 +296,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 80px 28px 44px;
-  color: var(--paper);
+  color: var(--on-dark);
   background: var(--graphite);
   text-align: center;
 }
@@ -302,7 +304,7 @@ h1 {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: var(--paper);
+  color: var(--on-dark);
 }
 .qr-overlay .eyebrow { color: var(--blue-hi); }
 .qr-overlay h2 {
@@ -364,10 +366,10 @@ h1 {
 .done-button {
   width: 100%;
   margin-top: 32px;
-  color: var(--ink);
-  background: #5e98f0; /* lighter blue — 5.9:1 vs ink */
+  color: #1c1c1e; /* constant: always dark text on the light-blue button */
+  background: #5e98f0;
 }
-.done-button .v-icon { color: var(--ink); }
+.done-button .v-icon { color: #1c1c1e; }
 
 /* ─── Shared layout rules (details) ─────────────────────── */
 .details-content { padding: 32px 22px 110px; }
@@ -384,7 +386,7 @@ h1 {
 .arrival-card {
   padding: 18px;
   background: var(--graphite);
-  color: var(--paper);
+  color: var(--on-dark);
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(28, 28, 30, .12);
 }
@@ -403,7 +405,7 @@ h1 {
   margin: 6px 0 3px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--paper);
+  color: var(--on-dark);
   line-height: 1.2;
 }
 .info-section { margin-top: 32px; }
@@ -446,7 +448,7 @@ h1 {
   bottom: 0;
   width: min(100%, 520px);
   padding: 12px 22px 20px;
-  background: rgba(245, 242, 236, .94);
+  background: var(--footer-bg);
   border-top: 1px solid var(--line);
   backdrop-filter: blur(14px);
 }
@@ -457,7 +459,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  color: var(--paper);
+  color: var(--on-dark);
   background: var(--graphite);
   border-radius: 4px;
   font-weight: 600;
@@ -472,10 +474,10 @@ h1 {
 .details-page .topbar {
   background: var(--graphite);
   border-bottom-color: var(--graphite);
-  color: var(--paper);
+  color: var(--on-dark);
 }
-.details-page .icon-button { color: var(--paper); }
-.details-page .topbar-title { color: var(--paper); }
+.details-page .icon-button { color: var(--on-dark); }
+.details-page .topbar-title { color: var(--on-dark); }
 .details-page .topbar-mark { color: var(--blue-hi); }
 .details-page .details-hero { position: relative; }
 .details-page .details-hero::after {
@@ -501,7 +503,7 @@ h1 {
 }
 .details-page .accordion-item.expanded .accordion-trigger {
   padding: 14px 12px 13px 9px;
-  color: var(--paper);
+  color: var(--on-dark);
 }
 .details-page .accordion-item.expanded .accordion-icon {
   color: var(--graphite);
@@ -518,7 +520,7 @@ h1 {
 
 /* ─── View pass button in details ────────────────────────── */
 .details-page .details-footer .primary-button {
-  color: var(--paper);
+  color: var(--on-dark);
   background: var(--graphite);
 }
 .details-page .details-footer .primary-button .v-icon { color: var(--blue); }
@@ -551,3 +553,33 @@ h1 {
 @keyframes rise-in  { from { opacity: 0; transform: translateY(8px); }  to { opacity: 1; transform: translateY(0); } }
 @keyframes reveal   { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fade-in  { from { opacity: 0; }                              to { opacity: 1; } }
+
+/* ─── Theme toggle ───────────────────────────────────────── */
+.topbar-actions { display: flex; align-items: center; gap: 2px; }
+.theme-btn { width: 34px; height: 34px; opacity: .55; transition: opacity .15s; }
+.theme-btn:hover { opacity: 1; }
+
+/* ─── Dark mode ──────────────────────────────────────────── */
+html.dark {
+  --ink:       #edeae4;
+  --paper:     #1c1c1e;
+  --graphite:  #2e2e2e;
+  --surface:   #272727;
+  --muted:     #929799;
+  --line:      rgba(255, 255, 255, .09);
+  --blue-lo:   #6199f0;  /* redirect: all bgs are dark in dark mode */
+  --footer-bg: rgba(28, 28, 30, .93);
+  background:  #111111;
+}
+html.dark .credential-card {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .07),
+    0 2px 8px  rgba(0, 0, 0, .5),
+    0 10px 24px rgba(0, 0, 0, .4);
+}
+html.dark .arrival-card { box-shadow: 0 4px 14px rgba(0, 0, 0, .4); }
+html.dark .primary-button:hover { background: #3c3c3c; }
+html.dark .pass-page,
+html.dark .details-page {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.4);
+}
