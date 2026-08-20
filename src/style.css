@@ -364,13 +364,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: .1em;
 }
-.done-button {
-  width: 100%;
-  margin-top: 32px;
-  color: #1c1c1e; /* constant: always dark text on the light-blue button */
-  background: #5e98f0;
-}
-.done-button .v-icon { color: #1c1c1e; }
+.done-button { width: 100%; margin-top: 32px; }
 
 /* ─── Shared layout rules (details) ─────────────────────── */
 .details-content { padding: 32px 22px 110px; }
@@ -470,6 +464,8 @@ h1 {
 }
 .primary-button:hover { background: #2e2e2e; transform: translateY(-1px); }
 .primary-button .v-icon { color: var(--blue); }
+.primary-button.done-button { background: var(--on-dark); color: var(--graphite); }
+.primary-button.done-button .v-icon { color: var(--blue); }
 
 /* ─── Details-page overrides ─────────────────────────────── */
 .details-page .topbar {
@@ -528,18 +524,6 @@ h1 {
   background: var(--graphite);
 }
 .details-page .details-footer .primary-button .v-icon { color: var(--blue); }
-.pass-return-mark {
-  display: inline-grid;
-  place-items: center;
-  min-width: 34px;
-  height: 21px;
-  padding: 0 5px;
-  color: rgba(245, 242, 236, .55);
-  border: 1px solid rgba(245, 242, 236, .22);
-  font: 8px 'DM Mono', monospace;
-  letter-spacing: .12em;
-}
-
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (min-width: 521px) {
   .pass-page,
