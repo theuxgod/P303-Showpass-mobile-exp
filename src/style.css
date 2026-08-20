@@ -30,7 +30,9 @@
 body { margin: 0; min-width: 320px; }
 h1, h2, p { margin: 0; }
 button { border: 0; font: inherit; cursor: pointer; }
-#app { min-height: 100svh; }
+#app { min-height: 100svh; display: flex; flex-direction: column; align-items: center; }
+/* strip Vuetify's white background so the page background shows consistently */
+.v-application { background: transparent !important; }
 
 /* ─── Shell ──────────────────────────────────────────────── */
 .pass-page,
@@ -526,10 +528,25 @@ h1 {
 .details-page .details-footer .primary-button .v-icon { color: var(--blue); }
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (min-width: 521px) {
+  /* collapse Vuetify wrappers to content height so justify-content: center works */
+  .v-application,
+  .v-main { min-height: unset !important; height: auto !important; }
   .pass-page,
   .details-page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: unset;
+    height: min(100svh, 900px);
+    overflow: hidden auto;
+    scrollbar-width: none;
     box-shadow: 0 0 0 1px rgba(28, 28, 30, .07), 0 20px 60px rgba(28, 28, 30, .13);
   }
+  .pass-page::-webkit-scrollbar,
+  .details-page::-webkit-scrollbar { display: none; }
+  .details-footer { position: sticky; }
+  .qr-overlay { max-height: min(100svh, 900px); }
 }
 
 /* ─── Motion ─────────────────────────────────────────────── */
