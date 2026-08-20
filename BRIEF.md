@@ -83,6 +83,8 @@ Avoid neon colors, gradients, overly futuristic styling, and generic ai generate
 
 The pass should be the expressive hero. Event details should feel lighter, calmers, and utility focused while using the same visual system.
 
+Use light and dark mode to ensure that user can adequately see the data at both day and night in festival environment.
+
 The pass should feel like a designed digital credential, not a standard webpage card.
 
 ## Interactions
@@ -93,6 +95,7 @@ Keep interactions simple and reliable
 - Preset pass - expands the QR code into a focused full screen credential view
 - Done / View Pass - returns the user to the main pass.
 - Even info accordions - Parking & Rideshare, Bag policy, Re-entry, and accessibility can expand and collapse
+- Light and Dark mode
 
 Do not add favorites, schedules, filters, maps, wallet integrations, or other interactions outside of the core flow.
 
