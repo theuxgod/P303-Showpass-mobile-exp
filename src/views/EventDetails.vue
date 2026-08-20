@@ -22,7 +22,7 @@ function togglePanel(id: string) {
     <header class="topbar">
       <button class="icon-button" aria-label="View pass" @click="$router.push('/')"><v-icon icon="mdi-arrow-left" /></button>
       <span class="topbar-title">Event details</span>
-      <span class="topbar-actions"><button class="icon-button theme-btn" @click="toggleTheme()" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"><v-icon :icon="isDark ? 'mdi-weather-sunny' : 'mdi-weather-night'" /></button><span class="topbar-mark">NLF</span></span>
+      <span class="topbar-actions"><span class="topbar-mark">NLF</span><button class="icon-button theme-btn" @click="toggleTheme()" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"><v-icon :icon="isDark ? 'mdi-weather-sunny' : 'mdi-weather-night'" /></button></span>
     </header>
     <main class="details-content">
       <section class="details-hero"><p class="eyebrow">Your weekend, mapped out</p><h1>{{ event.festival }}</h1><p class="muted-copy">Everything you need for a smooth arrival at {{ event.venue }}.</p></section>
